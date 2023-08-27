@@ -49,7 +49,7 @@ export default function Home({ allPostsData }) {
             <Link href={`/posts/${id}`}>
               <Image src={`${thumbnail}`} className={styles.thumbnailImage} alt={`${title}`} width={580} />
             </Link>
-            <Link href="/" legacyBehavior>
+            <Link href={`/posts/${id}`} legacyBehavior>
               <a className={utilStyle.boldText}>{`${title}`}</a>
             </Link>
             <br />
