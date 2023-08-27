@@ -3,6 +3,7 @@ import { Children } from "react";
 import styles from "./layout.module.css"
 import utilsStyles from "../styles/utils.module.css"
 import Link from "next/link";
+import Image from "next/image"
 
 const name="Shin Code";
 export const siteTitle = "Next.js Blog";
@@ -16,12 +17,12 @@ function Layout({ children, home }) {
             <header className={styles.header}>
                 {home ? (
                     <>
-                        <img src="/images/profile.png" className={`${utilsStyles.borderCircle} ${styles.headerHomeImage}`} />
+                        <Image src="/images/profile.png" className={`${utilsStyles.borderCircle} ${styles.headerHomeImage}`} width={50} height={50} alt={siteTitle} />
                         <h1 className={utilsStyles.heading2Xl}>{name}</h1>
                     </>
                 ):(
                     <>
-                        <img src="/images/profile.png" className={utilsStyles.borderCircle} />
+                        <Image src="/images/profile.png" className={utilsStyles.borderCircle} width={40} height={40} alt={siteTitle} />
                         <h1 className={utilsStyles.heading2Xl}>{name}</h1>
                     </>
                 )}
